@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+const API_URL = import.meta.env.VITE_API_URL || "/api";
 
 // AI Assistant with real API call
 function AIAssistant() {
@@ -16,7 +17,7 @@ function AIAssistant() {
     setMessages((prev) => [...prev, { from: "user", text: input }]);
     setLoading(true);
     try {
-      const res = await fetch("/api/ai/ask", {
+      const res = await fetch(`${API_URL}/ai/ask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),

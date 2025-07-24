@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+const API_URL = import.meta.env.VITE_API_URL || "/api";
 import MainLayout from "../layouts/MainLayout";
 import Input from "../components/Input";
 import Button from "../components/Button";
@@ -25,7 +26,7 @@ export default function Register() {
     setError("");
     setSuccess("");
     try {
-      const res = await fetch("/api/auth/register", {
+      const res = await fetch(`${API_URL}/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
