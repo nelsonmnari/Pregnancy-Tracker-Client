@@ -1,3 +1,58 @@
+# Pregnancy Tracker Website
+
+A full-stack MERN web application for expectant mothers to track pregnancy progress, receive health advice, book appointments, chat with healthcare professionals, upload documents, and use an AI health assistant. The frontend is built with React (Vite), and the backend is powered by Node.js, Express, and MongoDB.
+
+## Features
+
+- User authentication (register/login)
+- Dynamic pregnancy tracking (weeks, due date, progress bar)
+- Swahili health advice with English translation
+- Appointment booking with midwives
+- Chat with doctor/nurse
+- Document upload (prescriptions, reports)
+- AI health assistant (OpenAI integration)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+- pnpm (or npm/yarn)
+
+### Setup
+
+1. Clone this repository:
+   ```sh
+   git clone <this-repo-url>
+   cd client
+   ```
+2. Install dependencies:
+   ```sh
+   pnpm install
+   ```
+3. Create a `.env` file in the `client` folder:
+   ```env
+   VITE_API_URL=https://pregnancy-tracker-server.onrender.com/api
+   ```
+4. Start the development server:
+   ```sh
+   pnpm dev
+   ```
+
+### Backend
+
+The backend source code and setup instructions are available here:
+[Pregnancy Tracker Server (GitHub)](https://github.com/nelsonmnari/Pregnancy-Tracker-Server.git)
+
+## Deployment
+
+- Frontend: Vercel
+- Backend: Render
+
+## License
+
+MIT
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
